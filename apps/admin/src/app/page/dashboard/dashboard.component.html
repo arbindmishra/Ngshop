@@ -1,0 +1,54 @@
+<div class="admin-page">
+    <p-card header="Dashboard" subheader="Latest Update">
+        <div class="grid">
+            <div class="col-3">
+                <p-card styleClass="d-orders" routerLink="/orders">
+                    <div class="d-item">
+                        <div>
+                            <i class="pi pi-shopping-cart">
+                                <span class="name">Orders</span>
+                            </i>
+                        </div>
+                        <span class="number">{{ statistics[0] }}</span>
+                    </div>
+                </p-card>
+            </div>
+            <div class="col-3">
+                <p-card styleClass="d-products" routerLink="/products">
+                    <div class="d-item">
+                        <div>
+                            <i class="pi pi-briefcase">
+                                <span class="name">Products</span>
+                            </i>
+                        </div>
+                        <span class="number">{{ statistics[1] }}</span>
+                    </div>
+                </p-card>
+            </div>
+            <div class="col-3">
+                <p-card styleClass="d-users" routerLink="/users">
+                    <div class="d-item">
+                        <div>
+                            <i class="pi pi-users">
+                                <span class="name">Users</span>
+                            </i>
+                        </div>
+                        <span class="number">{{ statistics[2] }}</span>
+                    </div>
+                </p-card>
+            </div>
+            <div class="col-3">
+                <p-card styleClass="d-totalsales">
+                    <div class="d-item">
+                        <div>
+                            <i class="pi pi-dollar">
+                                <span class="name">Total Sales</span>
+                            </i>
+                        </div>
+                        <span class="number">{{ statistics[3] | currency : 'INR' }}</span>
+                    </div>
+                </p-card>
+            </div>
+        </div>
+    </p-card>
+</div>

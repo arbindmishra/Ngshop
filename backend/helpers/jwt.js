@@ -13,12 +13,15 @@ function authJwt() {
     isRevoked: isRevoked,
   }).unless({
     path: [
+      { url: /\/public\/uploads(.*)/, methods: ["GET", "OPTIONS"] }, //FOR IMAGES OF PRODUCTS
       { url: /\/api\/v1\/products(.*)/, methods: ["GET", "OPTIONS"] }, //WE USE REGEX TO HAVE LESS CODE
       //   { url: ${api}products, methods: ["GET", "OPTIONS"] },
       //USERS CAN SEE PRODUCTS WITHOUT LOGING IN
       { url: /\/api\/v1\/categories(.*)/, methods: ["GET", "OPTIONS"] },
+      { url: /\/api\/v1\/orders(.*)/, methods: ["POST", "OPTIONS"] },
       `${api}/users/login`, //EXCLUDES LOGIN FROM API PROTECTION AS WE NEED TO LOGIN TO GET A JWT TOKEN
       `${api}/users/register`,
+      // { url: /(.*)/ },
     ],
   });
 }

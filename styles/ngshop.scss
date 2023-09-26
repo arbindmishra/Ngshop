@@ -1,0 +1,46 @@
+//ORDER OF IMPORT MATTERS
+
+//Base
+@import '~normalize.css/normalize.css';
+@import './base/fonts.scss';
+@import './base/colors.scss';
+@import './base/mixins.scss';
+
+
+//Libraries
+
+@import '~primeflex/primeflex.css';
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~animate.css/animate.css";
+@import './base/configuration.scss';
+
+
+//Pages
+@import 'apps/shop/pages/home-page.scss';
+@import './apps/shop/pages/product-list-page.scss';
+
+//Shared
+@import 'apps/shop/pages/shared/header.scss';
+@import 'apps/shop/pages/shared/footer.scss';
+@import 'apps/shop/pages/shared/nav.scss';
+
+//Libs
+@import 'libs/ui/ui.scss';
+@import 'libs/products/products.scss';
+@import 'libs/orders/orders.scss';
+
+
+.container{
+    width:1200px;
+    padding:15px;
+    margin: 0 auto;
+    background-color: var(--surface-100);
+}
+
+button {
+    background-color: $primary-color;
+    border:0;
+}
+

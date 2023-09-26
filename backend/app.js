@@ -11,10 +11,12 @@ app.use(cors());
 app.options("*", cors());
 
 //middleware
-app.use(express.json());
-app.use(morgan("tiny"));
+app.use(express.json()); //USED INSTEAD OF BODY-PARSER(HAVE GOT DEPRECATED)
+app.use(morgan("tiny")); //USED TO LOG HTTP REQUESTS IN TERMINAL--> MORGAN API
 app.use(authJwt());
+app.use("/public/uploads", express.static(__dirname + "/public/uploads")); //MAKES THE FOLDER STATIC(PATH)--REQUIRED FOR IMAGE
 app.use(errorHandler);
+
 //Routes
 const categoriesRoutes = require("./routes/categories");
 const productsRoutes = require("./routes/products");

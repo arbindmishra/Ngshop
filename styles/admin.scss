@@ -1,0 +1,26 @@
+//ORDER OF IMPORT MATTERS
+
+//Base
+@import '~normalize.css/normalize.css';
+@import './base/fonts.scss';
+@import './base/colors.scss';
+@import './base/mixins.scss';
+
+
+//Libraries
+
+@import '~primeflex/primeflex.css';
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import './base/configuration.scss';
+
+//Shared
+@import './apps/admin/shell.scss';
+@import './apps/admin/dashboard.scss';
+@import './apps/admin/sidebar.scss';
+
+
+
+//Libs
+@import './libs/users/users.scss';
